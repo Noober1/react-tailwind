@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toast {
+    @apply p-2 max-w-xs bg-white rounded-md shadow-md flex items-center space-x-4 cursor-pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.toast-icon {
+    @apply flex-shrink-0;
+}
+
+.toast-title {
+    @apply text-base font-bold text-gray-900 capitalize;
+}
+
+.toast-message {
+    @apply text-gray-700 font-sans text-sm;
 }
